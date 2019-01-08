@@ -1,0 +1,72 @@
+--------Implementation class for each request ------------
+
+
+public inerface NewsScraperServiceImpl{
+
+
+public List<Authors> avalilableAuthor(){
+
+   step1- connect to DB and execute a query to fetch all autor details from repespective table
+   step2- return List<Autors>
+
+}
+
+
+public List<Article> fetchArticleByAuthor(String authorName){
+
+    step1- connect to DB and execute a query to fetch articles for the respective authorname
+    step2- return List<Article>
+
+}
+
+
+public List<Article> fetchArticleByTitleDescription(String title, String description){
+
+     step1- connect to DB and execute a query to fetch articles for the respective title and description
+     step2- return List<Article>
+
+}
+
+
+public List<Article> fetchArticleByDate(Date date){
+
+     step1- connect to DB and execute a query to fetch articles for the respective date
+     step2- return List<Article>
+	 
+}
+
+
+public Author fetchAuthorByDate(Date date){
+
+     step1- connect to DB and execute a query to fetch author for the respective date
+     step2- return Author
+
+}
+
+
+public List<Article> fetchArticleByTag(List<String> tags){
+
+     step1- connect to DB and execute a query to fetch article for the respective tags
+     step2- return Article
+	 
+}
+
+
+public List<Article> fetchArticleByCity(String cityName){
+   
+     step1- connect to DB and execute a query to fetch article for the respective cityname
+     step2- return Article
+
+}
+
+
+public List<Article> fetchArticleByCategory(List<String> categories){
+
+     step1- connect to DB and execute a query to fetch article for the respective categories
+     step2- return Article
+
+}
+
+
+
+}
