@@ -26,7 +26,7 @@ public List<Article> fetchArticleByDate(Date date);
 /**
 * This mentod will fetch author by date
 */
-public Author fetchAuthorByDate(Date date)
+public Author fetchAuthorByDate(Date date);
 
 /**
 * This mentod will fetch artcles by tags
