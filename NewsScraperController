@@ -62,3 +62,6 @@ public List<Article> fetchArticleByCategory(@PathVariable(value = "categorylist"
   return newsScrapperService.getArticleByCategory(categories);
 
 }
+
+
+}
