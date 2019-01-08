@@ -1,0 +1,64 @@
+------Controller which receives request from browser------------
+
+@RestController
+public class NewsScraperController{
+
+@Autowired
+private NewsScrapperService newsScrapperService
+
+@GetMapping("/newsscrapper/search/allauthors")
+public List<Authors> avalilableAuthor(){
+
+   return newsScrapperService.getAvailableAuthor();
+
+}
+
+@GetMapping("/newsscrapper/search/article/author/{authorname}")
+public List<Article> fetchArticleByAuthor(@PathVariable(value = "authorname") String authorName){
+
+    return newsScrapperService.getArticleByAuthor(authorName);
+
+}
+
+@GetMapping("/newsscrapper/search/article/{title}/{description}")
+public List<Article> fetchArticleByTitleDescription(@PathVariable(value = "title") String title, @PathVariable(value = "description") String description){
+
+  return newsScrapperService.getArticleByTitleDescription(title,description);
+
+}
+
+@GetMapping("/newsscrapper/search/article/date/{date}")
+public List<Article> fetchArticleByDate(@PathVariable(value = "date") Date date){
+
+   return newsScrapperService.getArticleByDate(date);
+
+}
+
+@GetMapping("/newsscrapper/search/author/date/{date}")
+public Author fetchAuthorByDate(@PathVariable(value = "date") Date date){
+
+   return newsScrapperService.getAuthorByDate(date);
+
+}
+
+
+@GetMapping("/newsscrapper/search/article/listtag/{taglist}")
+public List<Article> fetchArticleByTag(@PathVariable(value = "taglist") List<String> tags){
+
+   return newsScrapperService.getArticleByTag(tags);
+
+}
+
+@GetMapping("/newsscrapper/search/article/city/{cityname}")
+public List<Article> fetchArticleByCity(@PathVariable(value = "cityname") String cityName){
+
+  return newsScrapperService.getArticleByCity(cityName);
+  
+}
+
+@GetMapping("/newsscrapper/search/article/categories/{categorylist}")
+public List<Article> fetchArticleByCategory(@PathVariable(value = "categorylist") List<String> categories){
+
+  return newsScrapperService.getArticleByCategory(categories);
+
+}
