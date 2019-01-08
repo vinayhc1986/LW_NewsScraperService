@@ -1,0 +1,48 @@
+--------Service call to pass the each request to its respective implementation ------------
+
+
+public inerface NewsScraperService{
+
+/**
+* This mentod will fetch all available author
+*/
+public List<Authors> avalilableAuthor();
+
+/**
+* This mentod will fetch articles by author name
+*/
+public List<Article> fetchArticleByAuthor(String authorName);
+
+/**
+* This mentod will fetch articles by title and description
+*/
+public List<Article> fetchArticleByTitleDescription(String title, String description);
+
+/**
+* This mentod will fetch articles by date
+*/
+public List<Article> fetchArticleByDate(Date date);
+
+/**
+* This mentod will fetch author by date
+*/
+public Author fetchAuthorByDate(Date date)
+
+/**
+* This mentod will fetch artcles by tags
+*/
+public List<Article> fetchArticleByTag(List<String> tags);
+
+/**
+* This mentod will fetch articles by city
+*/
+public List<Article> fetchArticleByCity(String cityName);
+
+/**
+* This mentod will fetch articles by catgegory
+*/
+public List<Article> fetchArticleByCategory(List<String> categories);
+
+
+
+}
