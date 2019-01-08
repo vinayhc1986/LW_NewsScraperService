@@ -1,7 +1,7 @@
 --------Implementation class for each request ------------
 
 
-public inerface NewsScraperServiceImpl{
+public class NewsScraperServiceImpl implements NewsScraperService{
 
 
 public List<Authors> avalilableAuthor(){
